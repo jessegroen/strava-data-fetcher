@@ -1,0 +1,98 @@
+{
+  "totalActivities": 1348,
+  "byType": {
+    "Ride": 428,
+    "Run": 280,
+    "InlineSkate": 22,
+    "Walk": 328,
+    "Hike": 279,
+    "AlpineSki": 8,
+    "IceSkate": 3
+  },
+  "totalDistance": 37401,
+  "totalTime": 3980,
+  "totalElevation": 347176,
+  "lastUpdated": "2025-11-29T20:00:16.200Z",
+  "recentActivities": [
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-28T05:21:35Z",
+      "distance": 62,
+      "movingTime": 166,
+      "elevationGain": 104
+    },
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-25T05:39:45Z",
+      "distance": 62,
+      "movingTime": 171,
+      "elevationGain": 94
+    },
+    {
+      "name": "Middagloop",
+      "type": "Run",
+      "date": "2025-11-22T11:41:17Z",
+      "distance": 13,
+      "movingTime": 64,
+      "elevationGain": 15
+    },
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-21T05:40:41Z",
+      "distance": 62,
+      "movingTime": 170,
+      "elevationGain": 104
+    },
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-18T05:43:39Z",
+      "distance": 62,
+      "movingTime": 169,
+      "elevationGain": 102
+    },
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-14T05:35:14Z",
+      "distance": 62,
+      "movingTime": 158,
+      "elevationGain": 100
+    },
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-11T05:45:07Z",
+      "distance": 62,
+      "movingTime": 163,
+      "elevationGain": 99
+    },
+    {
+      "name": "Rustig rondje rollen",
+      "type": "InlineSkate",
+      "date": "2025-11-09T13:19:09Z",
+      "distance": 29,
+      "movingTime": 108,
+      "elevationGain": 16
+    },
+    {
+      "name": "Verjaardag vieren",
+      "type": "Walk",
+      "date": "2025-11-08T10:36:21Z",
+      "distance": 24,
+      "movingTime": 287,
+      "elevationGain": 16
+    },
+    {
+      "name": "Woon werk woon",
+      "type": "Ride",
+      "date": "2025-11-07T05:38:39Z",
+      "distance": 62,
+      "movingTime": 162,
+      "elevationGain": 99
+    }
+  ]
+}
