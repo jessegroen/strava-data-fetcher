@@ -1,0 +1,36 @@
+name: Update Strava Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Dagelijks om 6:00 UTC (7:00 Nederlandse tijd 's winters, 8:00 's zomers)
+  workflow_dispatch:  # Handmatig triggeren
+
+permissions:
+  contents: write  # Nodig om changes te kunnen committen
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Fetch Strava Data
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: node scripts/fetch-strava-data.js
+        
+      - name: Commit and Push if changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/strava-activities.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Strava data [$(date +'%Y-%m-%d %H:%M')]" && git push)
