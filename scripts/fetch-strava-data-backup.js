@@ -55,45 +55,8 @@ async function fetchActivities(accessToken) {
    return allActivities;
 }
 
-function convertToYourFormat(activities) {
-   console.log('⚙️  Converting activities to your format...');
-
-   return activities.map(activity => {
-      // Converteer de datum naar jouw formaat: "Sep 2, 2025, 4:37:58 AM"
-      const activityDate = new Date(activity.start_date);
-      const formattedDate = activityDate.toLocaleString('en-US', {
-         month: 'short',
-         day: 'numeric',
-         year: 'numeric',
-         hour: 'numeric',
-         minute: '2-digit',
-         second: '2-digit',
-         hour12: true
-      });
-
-      return {
-         "Activity ID": activity.id,
-         "Activity Date": formattedDate,
-         "Activity Name": activity.name,
-         "Activity Type": activity.type,
-         "Activity Description": activity.description || "",
-         "Elapsed Time": activity.elapsed_time,
-         "Distance": Math.round(activity.distance / 10) / 100, // Converteer meters naar km met 2 decimalen
-         "Filename": `activities/${activity.id}.gpx`,
-         "Moving Time": activity.moving_time,
-         "Max Speed": activity.max_speed || 0,
-         "Average Speed": activity.average_speed || 0,
-         "Elevation Gain": activity.total_elevation_gain || 0,
-         "Elevation Loss": 0, // Strava API geeft deze niet standaard, zou 0 zijn of je moet berekenen
-         "Elevation Low": activity.elev_low || 0,
-         "Elevation High": activity.elev_high || 0,
-         "Calories": activity.calories || 0
-      };
-   });
-}
-
-function generateStats(activities) {
-   console.log('📊 Generating statistics...');
+function processActivities(activities) {
+   console.log('⚙️  Processing activities...');
 
    const stats = {
       totalActivities: activities.length,
@@ -101,16 +64,37 @@ function generateStats(activities) {
       totalDistance: 0,
       totalTime: 0,
       totalElevation: 0,
+      lastUpdated: new Date().toISOString(),
+      recentActivities: []
    };
 
+   // Sorteer op datum (nieuwste eerst)
+   const sortedActivities = [...activities].sort((a, b) =>
+      new Date(b.start_date) - new Date(a.start_date)
+   );
+
    activities.forEach(activity => {
-      const type = activity["Activity Type"];
+      // Tel per type
+      const type = activity.type || 'Unknown';
       stats.byType[type] = (stats.byType[type] || 0) + 1;
-      stats.totalDistance += activity.Distance;
-      stats.totalTime += activity["Moving Time"] / 3600; // naar uren
-      stats.totalElevation += activity["Elevation Gain"];
+
+      // Totalen
+      stats.totalDistance += (activity.distance || 0) / 1000; // in km
+      stats.totalTime += (activity.moving_time || 0) / 3600; // in uren
+      stats.totalElevation += activity.total_elevation_gain || 0; // in meters
    });
 
+   // Laatste 10 activiteiten voor op je dashboard
+   stats.recentActivities = sortedActivities.slice(0, 10).map(activity => ({
+      name: activity.name,
+      type: activity.type,
+      date: activity.start_date,
+      distance: Math.round((activity.distance || 0) / 1000), // km
+      movingTime: Math.round((activity.moving_time || 0) / 60), // minuten
+      elevationGain: Math.round(activity.total_elevation_gain || 0), // meters
+   }));
+
+   // Rond totalen af
    stats.totalDistance = Math.round(stats.totalDistance);
    stats.totalTime = Math.round(stats.totalTime);
    stats.totalElevation = Math.round(stats.totalElevation);
@@ -121,22 +105,10 @@ function generateStats(activities) {
 async function main() {
    try {
       const accessToken = await getAccessToken();
-      const rawActivities = await fetchActivities(accessToken);
-      console.log(`✅ Fetched ${rawActivities.length} activities in total`);
+      const activities = await fetchActivities(accessToken);
+      console.log(`✅ Fetched ${activities.length} activities in total`);
 
-      const convertedActivities = convertToYourFormat(rawActivities);
-      const stats = generateStats(convertedActivities);
-
-      // Sorteer op datum (nieuwste eerst)
-      convertedActivities.sort((a, b) =>
-         new Date(b["Activity Date"]) - new Date(a["Activity Date"])
-      );
-
-      const output = {
-         lastUpdated: new Date().toISOString(),
-         stats: stats,
-         activities: convertedActivities
-      };
+      const processedData = processActivities(activities);
 
       // Zorg dat de data directory bestaat
       const dir = path.dirname(OUTPUT_FILE);
@@ -145,14 +117,14 @@ async function main() {
       }
 
       console.log('💾 Saving to file...');
-      fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
+      fs.writeFileSync(OUTPUT_FILE, JSON.stringify(processedData, null, 2));
 
       console.log(`✨ Done! Data saved to ${OUTPUT_FILE}`);
       console.log('\n📊 Summary:');
-      console.log(`   Total activities: ${stats.totalActivities}`);
-      console.log(`   Total distance: ${stats.totalDistance} km`);
-      console.log(`   Total time: ${stats.totalTime} hours`);
-      console.log(`   By type:`, stats.byType);
+      console.log(`   Total activities: ${processedData.totalActivities}`);
+      console.log(`   Total distance: ${processedData.totalDistance} km`);
+      console.log(`   Total time: ${processedData.totalTime} hours`);
+      console.log(`   By type:`, processedData.byType);
    } catch (error) {
       console.error('❌ Error:', error.message);
       process.exit(1);
