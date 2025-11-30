@@ -84,8 +84,10 @@ function convertToYourFormat(activities) {
          "Max Speed": activity.max_speed || 0,
          "Average Speed": activity.average_speed || 0,
          "Elevation Gain": activity.total_elevation_gain || 0,
+         "Elevation Loss": 0, // Strava API geeft deze niet standaard, zou 0 zijn of je moet berekenen
          "Elevation Low": activity.elev_low || 0,
          "Elevation High": activity.elev_high || 0,
+         "Calories": activity.calories || 0
       };
    });
 }
