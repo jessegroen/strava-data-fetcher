@@ -2,7 +2,7 @@ name: Update Strava Data
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Dagelijks om 6:00 UTC (7:00 Nederlandse tijd 's winters, 8:00 's zomers)
+    - cron: '0 20 * * *'  # Dagelijks om 20:00 UTC (21:00 Nederlandse tijd 's winters, 22:00 's zomers)
   workflow_dispatch:  # Handmatig triggeren
 
 permissions:
