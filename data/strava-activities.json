@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2025-12-04T20:23:01.850Z",
+  "lastUpdated": "2025-12-05T20:22:21.987Z",
   "stats": {
-    "totalActivities": 1349,
+    "totalActivities": 1350,
     "byType": {
-      "Run": 281,
+      "Run": 282,
       "Ride": 428,
       "InlineSkate": 22,
       "Walk": 328,
@@ -11,11 +11,27 @@
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37413,
-    "totalTime": 3981,
-    "totalElevation": 347191
+    "totalDistance": 37425,
+    "totalTime": 3982,
+    "totalElevation": 347212
   },
   "activities": [
+    {
+      "Activity ID": 16656466398,
+      "Activity Date": "Dec 5, 2025, 11:32:08 AM",
+      "Activity Name": "Een zakelijk rondje",
+      "Activity Type": "Run",
+      "Activity Description": "",
+      "Elapsed Time": 3670,
+      "Distance": 11.86,
+      "Filename": "activities/16656466398.gpx",
+      "Moving Time": 3547,
+      "Max Speed": 9,
+      "Average Speed": 3.343,
+      "Elevation Gain": 21.3,
+      "Elevation Low": -2.6,
+      "Elevation High": 11.8
+    },
     {
       "Activity ID": 16606689273,
       "Activity Date": "Nov 30, 2025, 7:25:11 AM",
