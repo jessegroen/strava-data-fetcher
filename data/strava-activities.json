@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2025-12-09T20:20:25.753Z",
+  "lastUpdated": "2025-12-10T20:24:14.096Z",
   "stats": {
-    "totalActivities": 1350,
+    "totalActivities": 1351,
     "byType": {
-      "Run": 282,
+      "Run": 283,
       "Ride": 428,
       "InlineSkate": 22,
       "Walk": 328,
@@ -11,11 +11,27 @@
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37425,
-    "totalTime": 3982,
-    "totalElevation": 347212
+    "totalDistance": 37433,
+    "totalTime": 3983,
+    "totalElevation": 347218
   },
   "activities": [
+    {
+      "Activity ID": 16704133632,
+      "Activity Date": "Dec 10, 2025, 2:07:17 PM",
+      "Activity Name": "Namiddagloop",
+      "Activity Type": "Run",
+      "Activity Description": "",
+      "Elapsed Time": 2395,
+      "Distance": 8.14,
+      "Filename": "activities/16704133632.gpx",
+      "Moving Time": 2369,
+      "Max Speed": 7.48,
+      "Average Speed": 3.438,
+      "Elevation Gain": 6,
+      "Elevation Low": -4.6,
+      "Elevation High": 1.4
+    },
     {
       "Activity ID": 16656466398,
       "Activity Date": "Dec 5, 2025, 11:32:08 AM",
