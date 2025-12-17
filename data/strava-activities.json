@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2025-12-16T20:23:41.683Z",
+  "lastUpdated": "2025-12-17T20:23:28.262Z",
   "stats": {
-    "totalActivities": 1351,
+    "totalActivities": 1352,
     "byType": {
-      "Run": 283,
+      "Run": 284,
       "Ride": 428,
       "InlineSkate": 22,
       "Walk": 328,
@@ -11,11 +11,27 @@
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37433,
-    "totalTime": 3983,
-    "totalElevation": 347218
+    "totalDistance": 37443,
+    "totalTime": 3984,
+    "totalElevation": 347238
   },
   "activities": [
+    {
+      "Activity ID": 16767027687,
+      "Activity Date": "Dec 17, 2025, 11:58:35 AM",
+      "Activity Name": "Nieuwe ronde nieuwe kansen",
+      "Activity Type": "Run",
+      "Activity Description": "",
+      "Elapsed Time": 3160,
+      "Distance": 9.58,
+      "Filename": "activities/16767027687.gpx",
+      "Moving Time": 3024,
+      "Max Speed": 10.5,
+      "Average Speed": 3.169,
+      "Elevation Gain": 20,
+      "Elevation Low": 7.2,
+      "Elevation High": 22.1
+    },
     {
       "Activity ID": 16704133632,
       "Activity Date": "Dec 10, 2025, 2:07:17 PM",
