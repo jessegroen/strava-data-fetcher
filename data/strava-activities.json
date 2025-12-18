@@ -1,21 +1,37 @@
 {
-  "lastUpdated": "2025-12-17T20:23:28.262Z",
+  "lastUpdated": "2025-12-18T20:20:33.952Z",
   "stats": {
-    "totalActivities": 1352,
+    "totalActivities": 1353,
     "byType": {
+      "Ride": 429,
       "Run": 284,
-      "Ride": 428,
       "InlineSkate": 22,
       "Walk": 328,
       "Hike": 279,
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37443,
-    "totalTime": 3984,
-    "totalElevation": 347238
+    "totalDistance": 37466,
+    "totalTime": 3985,
+    "totalElevation": 347281
   },
   "activities": [
+    {
+      "Activity ID": 16778114392,
+      "Activity Date": "Dec 18, 2025, 4:18:40 PM",
+      "Activity Name": "Werk woon",
+      "Activity Type": "Ride",
+      "Activity Description": "",
+      "Elapsed Time": 4389,
+      "Distance": 23.46,
+      "Filename": "activities/16778114392.gpx",
+      "Moving Time": 4274,
+      "Max Speed": 11.08,
+      "Average Speed": 5.488,
+      "Elevation Gain": 42.9,
+      "Elevation Low": -2.8,
+      "Elevation High": 13.1
+    },
     {
       "Activity ID": 16767027687,
       "Activity Date": "Dec 17, 2025, 11:58:35 AM",
