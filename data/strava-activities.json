@@ -1,21 +1,37 @@
 {
-  "lastUpdated": "2025-12-18T20:20:33.952Z",
+  "lastUpdated": "2025-12-19T20:21:55.729Z",
   "stats": {
-    "totalActivities": 1353,
+    "totalActivities": 1354,
     "byType": {
+      "Walk": 329,
       "Ride": 429,
       "Run": 284,
       "InlineSkate": 22,
-      "Walk": 328,
       "Hike": 279,
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37466,
-    "totalTime": 3985,
+    "totalDistance": 37469,
+    "totalTime": 3986,
     "totalElevation": 347281
   },
   "activities": [
+    {
+      "Activity ID": 16787238742,
+      "Activity Date": "Dec 19, 2025, 5:38:00 PM",
+      "Activity Name": "Avondwandeling",
+      "Activity Type": "Walk",
+      "Activity Description": "",
+      "Elapsed Time": 6548,
+      "Distance": 3.2,
+      "Filename": "activities/16787238742.gpx",
+      "Moving Time": 3203,
+      "Max Speed": 3.7,
+      "Average Speed": 0.998,
+      "Elevation Gain": 0,
+      "Elevation Low": 6,
+      "Elevation High": 7.6
+    },
     {
       "Activity ID": 16778114392,
       "Activity Date": "Dec 18, 2025, 4:18:40 PM",
