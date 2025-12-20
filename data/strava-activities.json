@@ -1,21 +1,37 @@
 {
-  "lastUpdated": "2025-12-19T20:21:55.729Z",
+  "lastUpdated": "2025-12-20T20:20:14.870Z",
   "stats": {
-    "totalActivities": 1354,
+    "totalActivities": 1355,
     "byType": {
+      "Ride": 430,
       "Walk": 329,
-      "Ride": 429,
       "Run": 284,
       "InlineSkate": 22,
       "Hike": 279,
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37469,
-    "totalTime": 3986,
-    "totalElevation": 347281
+    "totalDistance": 37496,
+    "totalTime": 3987,
+    "totalElevation": 347328
   },
   "activities": [
+    {
+      "Activity ID": 16795035015,
+      "Activity Date": "Dec 20, 2025, 3:22:53 PM",
+      "Activity Name": "Fiets thuisbrengen",
+      "Activity Type": "Ride",
+      "Activity Description": "",
+      "Elapsed Time": 4243,
+      "Distance": 26.49,
+      "Filename": "activities/16795035015.gpx",
+      "Moving Time": 4140,
+      "Max Speed": 11.86,
+      "Average Speed": 6.398,
+      "Elevation Gain": 46.4,
+      "Elevation Low": -3.8,
+      "Elevation High": 13.1
+    },
     {
       "Activity ID": 16787238742,
       "Activity Date": "Dec 19, 2025, 5:38:00 PM",
