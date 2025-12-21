@@ -1,21 +1,37 @@
 {
-  "lastUpdated": "2025-12-20T20:20:14.870Z",
+  "lastUpdated": "2025-12-21T20:21:10.013Z",
   "stats": {
-    "totalActivities": 1355,
+    "totalActivities": 1356,
     "byType": {
+      "Walk": 330,
       "Ride": 430,
-      "Walk": 329,
       "Run": 284,
       "InlineSkate": 22,
       "Hike": 279,
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37496,
-    "totalTime": 3987,
-    "totalElevation": 347328
+    "totalDistance": 37507,
+    "totalTime": 3989,
+    "totalElevation": 347361
   },
   "activities": [
+    {
+      "Activity ID": 16801406648,
+      "Activity Date": "Dec 21, 2025, 9:21:05 AM",
+      "Activity Name": "Verkenningstocht over de hei",
+      "Activity Type": "Walk",
+      "Activity Description": "",
+      "Elapsed Time": 8267,
+      "Distance": 11.25,
+      "Filename": "activities/16801406648.gpx",
+      "Moving Time": 7964,
+      "Max Speed": 2.867,
+      "Average Speed": 1.412,
+      "Elevation Gain": 32.9,
+      "Elevation Low": 6.2,
+      "Elevation High": 23.2
+    },
     {
       "Activity ID": 16795035015,
       "Activity Date": "Dec 20, 2025, 3:22:53 PM",
