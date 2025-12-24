@@ -1,21 +1,37 @@
 {
-  "lastUpdated": "2025-12-23T20:21:36.312Z",
+  "lastUpdated": "2025-12-24T20:21:34.245Z",
   "stats": {
-    "totalActivities": 1356,
+    "totalActivities": 1357,
     "byType": {
+      "Run": 285,
       "Walk": 330,
       "Ride": 430,
-      "Run": 284,
       "InlineSkate": 22,
       "Hike": 279,
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37507,
-    "totalTime": 3989,
-    "totalElevation": 347361
+    "totalDistance": 37517,
+    "totalTime": 3990,
+    "totalElevation": 347389
   },
   "activities": [
+    {
+      "Activity ID": 16828356262,
+      "Activity Date": "Dec 24, 2025, 10:56:45 AM",
+      "Activity Name": "Middagloop",
+      "Activity Type": "Run",
+      "Activity Description": "",
+      "Elapsed Time": 3171,
+      "Distance": 10.31,
+      "Filename": "activities/16828356262.gpx",
+      "Moving Time": 3139,
+      "Max Speed": 13.24,
+      "Average Speed": 3.284,
+      "Elevation Gain": 28.4,
+      "Elevation Low": 7.2,
+      "Elevation High": 27.5
+    },
     {
       "Activity ID": 16801406648,
       "Activity Date": "Dec 21, 2025, 9:21:05 AM",
