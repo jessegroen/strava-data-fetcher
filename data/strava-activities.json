@@ -1,21 +1,37 @@
 {
-  "lastUpdated": "2025-12-24T20:21:34.245Z",
+  "lastUpdated": "2025-12-25T20:22:20.417Z",
   "stats": {
-    "totalActivities": 1357,
+    "totalActivities": 1358,
     "byType": {
+      "Walk": 331,
       "Run": 285,
-      "Walk": 330,
       "Ride": 430,
       "InlineSkate": 22,
       "Hike": 279,
       "AlpineSki": 8,
       "IceSkate": 3
     },
-    "totalDistance": 37517,
-    "totalTime": 3990,
+    "totalDistance": 37523,
+    "totalTime": 3991,
     "totalElevation": 347389
   },
   "activities": [
+    {
+      "Activity ID": 16834661021,
+      "Activity Date": "Dec 25, 2025, 7:34:41 AM",
+      "Activity Name": "Ochtendwandeling",
+      "Activity Type": "Walk",
+      "Activity Description": "",
+      "Elapsed Time": 4105,
+      "Distance": 5.42,
+      "Filename": "activities/16834661021.gpx",
+      "Moving Time": 4022,
+      "Max Speed": 2.54,
+      "Average Speed": 1.349,
+      "Elevation Gain": 0,
+      "Elevation Low": -3.3,
+      "Elevation High": -1.1
+    },
     {
       "Activity ID": 16828356262,
       "Activity Date": "Dec 24, 2025, 10:56:45 AM",
